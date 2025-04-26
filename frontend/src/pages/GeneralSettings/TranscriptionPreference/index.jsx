@@ -8,6 +8,7 @@ import OpenAiLogo from "@/media/llmprovider/openai.png";
 import AnythingLLMIcon from "@/media/logo/anything-llm-icon.png";
 import OpenAiWhisperOptions from "@/components/TranscriptionSelection/OpenAiOptions";
 import NativeTranscriptionOptions from "@/components/TranscriptionSelection/NativeTranscriptionOptions";
+import AgoraSTTOptions from "@/components/TranscriptionSelection/AgoraSTT";
 import LLMItem from "@/components/LLMSelection/LLMItem";
 import { CaretUpDown, MagnifyingGlass, X } from "@phosphor-icons/react";
 import CTAButton from "@/components/lib/CTAButton";
@@ -20,6 +21,13 @@ const PROVIDERS = [
     logo: OpenAiLogo,
     options: (settings) => <OpenAiWhisperOptions settings={settings} />,
     description: "Leverage the OpenAI Whisper-large model using your API key.",
+  },
+  {
+    name: "Agora",
+    value: "agora",
+    logo: OpenAiLogo,
+    options: (settings) => <AgoraSTTOptions settings={settings} />,
+    description: "Agora model using your API key.",
   },
   {
     name: "AnythingLLM Built-In",
